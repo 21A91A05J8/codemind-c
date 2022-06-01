@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int m,n,i,j,r,fc=0;
-    scanf("%d%d",&m,&n);
+    int m,n,i,fc=0,j,r;
+    scanf("%d",&m);
+    scanf("%d",&n);
     for(i=m+1;i<n;i++)
     {
         fc=0;
@@ -11,7 +12,7 @@ int main()
             r=i%j;
             if(r==0)
             {
-              fc++;   
+                fc++;
             }
         }
         if(fc==2)
