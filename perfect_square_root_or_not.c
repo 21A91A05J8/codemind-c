@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,sq;
+    int n,i,sq,c=0;
     scanf("%d",&n);
-    for(i=1;i<=n/2;i++)
+    for(i=1;i<=n;i++)
     {
         sq=i*i;
         if(sq==n)
         {
-            break;
+            c++;
         }
     }
-    if(sq==n)
+    if(c>0)
     {
         printf("True");
     }
