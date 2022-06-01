@@ -2,24 +2,24 @@
 #include<math.h>
 int main()
 {
-    int n,temp,r,pro=0,dc=0;
+    int n,t,r,dc=0,sum=0;
     scanf("%d",&n);
-    temp=n;
-    while(n!=0)
+    t=n;
+    while(t!=0)
     {
-        r=n%10;
+        r=t%10;
         dc++;
-        n=n/10;
+        t=t/10;
     }
-    n=temp;
-    while(n!=0&&dc!=0)
+    t=n;
+    while(dc!=0)
     {
-        r=n%10;
-        pro=pro+pow(r,dc);
+        r=t%10;
+        sum=sum+pow(r,dc);
         dc--;
-        n=n/10;
+        t=t/10;
     }
-    if(pro==temp)
+    if(sum==n)
     {
         printf("True");
     }
