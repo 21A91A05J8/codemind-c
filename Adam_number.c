@@ -1,9 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int n,sq,re=0,rsq=0,temp,r,sqr;
+    int n,sq,r,re=0,sqr,rev=0;
     scanf("%d",&n);
-    temp=n;
     sq=n*n;
     while(n!=0)
     {
@@ -15,10 +14,10 @@ int main()
     while(sqr!=0)
     {
         r=sqr%10;
-        rsq=rsq*10+r;
+        rev=rev*10+r;
         sqr=sqr/10;
     }
-    if(rsq==sq)
+    if(rev==sq)
     {
         printf("True");
     }
