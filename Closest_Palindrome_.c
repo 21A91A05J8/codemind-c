@@ -2,17 +2,17 @@
 #include<math.h>
 int main()
 {
-    int n,i,t,rev=0,d1,d2,max,min,j,r;
+    int n,i,rev=0,r,j,d1,d2,s,min,max;
     scanf("%d",&n);
     for(i=n-1;i<n;i--)
     {
-        t=i;
+        s=i;
         rev=0;
-        while(t!=0)
+        while(s!=0)
         {
-            r=t%10;
+            r=s%10;
             rev=rev*10+r;
-            t=t/10;
+            s=s/10;
         }
         if(rev==i)
         {
@@ -22,13 +22,13 @@ int main()
     }
     for(j=n+1;j>n;j++)
     {
-        t=j;
+        s=j;
         rev=0;
-        while(t!=0)
+        while(s!=0)
         {
-            r=t%10;
+            r=s%10;
             rev=rev*10+r;
-            t=t/10;
+            s=s/10;
         }
         if(rev==j)
         {
