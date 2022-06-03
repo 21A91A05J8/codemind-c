@@ -1,28 +1,45 @@
 #include<stdio.h>
 #include<math.h>
+int fac(int i)
+{
+    int j,fc=2,sq;
+    sq=sqrt(i);
+    if(i==1)
+    {
+        return 1;
+        
+    }
+    for(j=2;j<=sq;j++)
+    {
+        if(i%j==0)
+        {
+            fc+=2;
+        }
+        
+    }
+    if(sq*sq==i)
+    {
+        fc=1;
+    }
+    return fc;
+}
+#include<stdio.h>
 int main()
 {
-	int n,m,i,j,f=0,c=0;
-	scanf("%d%d",&n,&m);
-	for(i=n;i<=m;i++)
-	{f=0;
-	if(i==1)
-	{
-		f=1;
-	}
-		for(j=2;j<=sqrt(i);j++)
-		{
-			if(i%j==0)
-			{
-				f=1;
-			    break;
-			}
-		}	
-		if(f==0)
-		{
-			
-			c++;
-		}
-	}
-	printf("%d",c);
+    int m,n,i,fc,p=0;
+    scanf("%d",&m);
+    scanf("%d",&n);
+    
+    for(i=m;i<=n;i++)
+    {
+       fc=fac(i);
+       if(fc==2)
+           {
+               p++;
+           }
+    }
+    
+    
+    printf("%d",p);
+    return 0;
 }
