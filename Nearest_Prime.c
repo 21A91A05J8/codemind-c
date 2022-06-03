@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int arr[20],n,i,s,j,fc=0,k,r,min,max,l,m,d1,d2;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        s=arr[i];
+        for(j=s;j>1;j--)
+        {
+            fc=0;
+            for(k=1;k<=j;k++)
+            {
+                r=j%k;
+                if(r==0)
+                {
+                    fc++;
+                }
+            }
+            if(fc==2)
+            {
+                min=j;
+                break;
+            }
+        }
+        for(l=s+1;l>s;l++)
+        {
+            fc=0;
+            for(m=1;m<=l;m++)
+            {
+                r=l%m;
+                if(r==0)
+                {
+                    fc++;
+                }
+            }
+            if(fc==2)
+            {
+                max=l;
+                break;
+            }
+        }
+        d1=abs(s-min);
+        d2=abs(s-max);
+        if(d1<d2)
+        {
+            printf("%d
+",min);
+        }
+        else if(d2<d1)
+        {
+            printf("%d
+",max);
+        }
+        else if(d1==d2)
+        {
+            printf("%d
+",min);
+        }
+        else
+        {
+            printf("%d",s);
+        }
+    }
+    return 0;
+}
