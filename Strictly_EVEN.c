@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+    int arr[20],n,i,c=0,r,s,ec=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        s=arr[i];
+        if(s%2==0)
+        {
+            c++;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        s=arr[i];
+        if(s%2==0)
+        {
+            r=i%2;
+            if(r==0)
+            {
+                ec++;
+            }
+        }
+    }
+    if(ec==c)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+    return 0;
+}
