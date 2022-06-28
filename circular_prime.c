@@ -1,12 +1,11 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,r,fc=0,rev=0;
+    int n,i,fc=0,rev=0,r;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-        r=n%i;
-        if(r==0)
+        if(n%i==0)
         {
             fc++;
         }
@@ -22,8 +21,7 @@ int main()
         }
         for(i=1;i<=rev;i++)
         {
-            r=rev%i;
-            if(r==0)
+            if(rev%i==0)
             {
                 fc++;
             }
@@ -41,5 +39,5 @@ int main()
     {
         printf("not prime");
     }
-    return 0;
+        return 0;
 }
