@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,r,fc=0,j,re,t,dc=0,c=0;
+    int n,i,fc=0,t,dc=0,c=0,r;
     scanf("%d",&n);
     t=n;
     while(t!=0)
@@ -12,8 +12,7 @@ int main()
     }
     for(i=1;i<=n;i++)
     {
-        r=n%i;
-        if(r==0)
+        if(n%i==0)
         {
             fc++;
         }
@@ -24,21 +23,25 @@ int main()
         {
             fc=0;
             r=n%10;
-            for(j=1;j<=r;j++)
+            if(r==1)
             {
-                re=r%j;
-                if(re==0)
+                n=n/10;
+                continue;
+            }
+            for(i=1;i<=r;i++)
+            {
+                if(r%i==0)
                 {
                     fc++;
                 }
             }
             if(fc==2)
             {
-               c++; 
+                c++;
             }
             n=n/10;
         }
-        if(dc==c)
+        if(c==dc)
         {
             printf("Mega Prime");
         }
