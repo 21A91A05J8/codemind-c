@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int arr[20],n,i,s,r,rev=0,c=0;
+    int arr[30],n,i,c=0,s,r,rev=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -9,8 +9,8 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        rev=0;
         s=arr[i];
+        rev=0;
         while(s!=0)
         {
             r=s%10;
