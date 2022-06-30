@@ -24,7 +24,7 @@ int main()
         y=temp;
     }
     x=0,y=1;
-    while((t+1>0))
+    while((t+1)>0)
     {
         temp=x;
         x=x+y;
