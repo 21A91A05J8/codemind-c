@@ -1,24 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,x=0,y=1,c;
+    int n,temp;
     scanf("%d",&n);
-    i=0;
-    while(i>=0)
+    int x=0,y=1;
+    while(n>0)
     {
-        c=x;
+        temp=x;
         x=x+y;
-        y=c;
-        if(n==x)
+        if(x==n)
         {
             printf("True");
             break;
         }
-        if(n<x)
+        if(x>n)
         {
             printf("False");
             break;
         }
-        i++;
-     }
+        y=temp;
+    }
 }
